@@ -1,0 +1,365 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif; /* Modern Sans-Serif for body */
+
+}
+
+
+html, body{
+  background-color: black;
+  overflow-x: hidden;
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  height: 30px;
+  position: fixed; /* Makes the nav bar fixed */
+  top: 0; /* Sticks to the top of the viewport */
+  width: 100%; /* Ensures it spans the full width */
+  z-index: 1000; /* Ensures it stays above other content */
+}
+
+.nav-part-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.nav img{
+  width: 35px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+}
+.nav .explore{
+  text-decoration: none;
+  background: transparent;
+  color: white;
+  padding: 7px 10px;
+  font-size: 17px;
+  border: 2px solid white;
+  border-radius: 50px;
+  
+}
+/* Button Base Styles */
+.explore {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: red;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Pseudo-element for the background fill */
+.explore::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 300%; /* Extra size for diagonal fill */
+  height: 300%;
+  background: white;
+  z-index: 0;
+  transition: transform 0.9s ease;
+  transform-origin: bottom right;
+  transform: translate(-100%, -100%) scale(0);
+  border-radius: 5px;
+}
+
+/* Ensure text stays above the background */
+.explore span{
+  position: relative;
+  z-index: 155;
+}
+
+/* Hover Effect */
+.explore:hover::before {
+  transform: translate(-100%, -100%) scale(1);
+}
+
+.explore:hover {
+  color: black;
+  border-color: white;
+}
+
+.hero{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading{
+  margin-top: -10vw;
+}
+.hero h1{
+  font-weight: 200;
+  font-size: 10vw;
+  color: white;
+  text-transform: uppercase;
+}
+
+
+/* Flag Theme for the Word "Bharat" */
+.flag-theme{
+  display: inline-block;
+  background: linear-gradient(to bottom, #FF9933 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #138808 66.66%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+}
+
+.horizontal-scroll{
+  width: 200%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 0 30px;
+}
+.horizontal-scroll-texts{
+  color: red;
+  font-size: 2.3vw;
+  text-transform: uppercase;
+}
+.horizontal-scroll-image{
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-image: url("logo.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.lists{
+  width: 100%;
+}
+.lists a{
+  text-decoration: none;
+  color: black;
+}
+.lists h1{
+  font-size: 8vw;
+  padding: 10px 20px;
+  font-weight: 100;
+}
+.sports{
+  width: 100%;
+  height: 90px;
+  background: rgba(225, 225, 225, .8);
+  display: flex;
+  align-items: center;
+}
+.sports img{
+  display: none;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  z-index: 999;
+  
+}
+
+.sports:hover{
+  background: red;
+  color: white;
+}
+.economy{
+  width: 100%;
+  height: 90px;
+  border-top: 2px solid black;
+  display: flex;
+  align-items: center;
+  background: rgba(225, 225, 225, .8);
+}
+
+.economy:hover{
+  background: red;
+  color: white;
+
+}
+.litracy{
+  width: 100%;
+  height: 90px;
+  border-top: 2px solid black;
+  display: flex;
+  align-items: center;
+  background: rgba(225, 225, 225, .8);
+}
+
+.litracy:hover{
+  background: red;
+  color: white;
+}
+
+.politics{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid black;
+  background: rgba(225, 225, 225, .8);
+}
+
+.politics:hover{
+  background: red;
+  color: white;
+}
+
+
+.education{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid black;
+  background: rgba(225, 225, 225, .8);
+}
+
+.education:hover{
+  background: red;
+  color: white;
+}
+
+
+.tourist{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid black;
+  background: rgba(225, 225, 225, .8);
+}
+
+.tourist:hover{
+  background: red;
+  color: white;
+}
+#wrapper,
+#content{
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+#content{
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#content #sectionMain h1{
+  font-size: 8vw;
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  opacity: 0.7;
+  z-index: 1;
+}
+#content #sectionMain{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#histPart1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#histPart2{
+  background: rgba(225, 0, 0, .8);
+  padding: 10px 10px;
+}
+#histabout1,
+#histabout2,
+#histabout3,
+#histabout4,
+#histabout5,
+#histabout6{
+  font-size: 5vw;
+  font-weight: 300;
+  color: white;
+}
+#histabout1 span, #histabout2 span, #histabout3 span, #histabout4 span, #histabout5 span {
+  display: inline-block; /* Ensures proper spacing */
+  opacity: 0; /* Initial opacity */
+  transform: translateY(50px); /* Matches GSAP's initial position */
+}
+#content #section{
+  width: 100%;
+  border-top: 3px solid white;
+  
+}
+#content img{
+  width: 100%;
+  height: 110vh;
+  object-fit: cover;
+  object-position: center;
+}
+#content img {
+  will-change: transform;
+}
+
+#image-container{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  perspective: 500px;
+  overflow: hidden;
+}
+#image-container #hole{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+#conclusion{
+  width: 100%;
+  height: 50vh;
+  background: rgba(225, 0, 0, .8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#conclusion hr{
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+#conclusion #lastText{
+  font-size: 10vw;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 100;
+  opacity: 1;
+}
+#conclusion h2, h3{
+  color: #888;
+}
